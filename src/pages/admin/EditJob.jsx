@@ -81,7 +81,7 @@ const EditJob = () => {
   }
 
   return (
-    <div>
+    <div className="edit-job-container">
       <h1>Edit Job</h1>
       <form onSubmit={handleSubmit}>
         <div>
@@ -119,9 +119,15 @@ const EditJob = () => {
             onChange={(e) => setSelectedStatus(e.target.value)}
           />
         </div>
-        <button type="submit">Submit</button>
+        <div className="btn-form">
+          <button type="submit" className="btn-submit">
+            Submit
+          </button>
+          <button onClick={() => navigate(-1)} className="btn-back">
+            Back
+          </button>
+        </div>
       </form>
-      <button onClick={() => navigate(-1)}>Back</button>
     </div>
   );
 };

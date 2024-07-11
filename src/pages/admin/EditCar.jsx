@@ -60,10 +60,10 @@ const EditCar = () => {
   }
 
   return (
-    <div>
+    <div className="edit-car-container">
       <h1>Edit Car</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form-group">
           <label>Plate Number:</label>
           <input
             type="text"
@@ -73,7 +73,7 @@ const EditCar = () => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>Model:</label>
           <input
             type="text"
@@ -83,7 +83,7 @@ const EditCar = () => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>Make:</label>
           <input
             type="text"
@@ -93,7 +93,7 @@ const EditCar = () => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>Color:</label>
           <input
             type="text"
@@ -103,9 +103,13 @@ const EditCar = () => {
             required
           />
         </div>
-        <button type="submit">Submit</button>
+        <div className="btn-form">
+          <button type="submit" className="btn-submit">
+            Submit
+          </button>
+          <button className="btn-back">Back</button>
+        </div>
       </form>
-      <button onClick={() => navigate(-1)}>Back</button>
     </div>
   );
 };

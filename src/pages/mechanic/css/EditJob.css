@@ -1,7 +1,4 @@
-.add-repairs-container,
-.edit-job-container,
-.edit-car-container,
-.edit-service-container {
+.edit-job-container {
   max-width: 600px;
   margin: auto;
   padding: 20px;

@@ -35,7 +35,6 @@ const EditService = () => {
         name,
         price: parseFloat(price),
       });
-      console.log("Service updated successfully");
       navigate(-1);
     } catch (error) {
       console.error("Error updating service:", error);
@@ -49,10 +48,10 @@ const EditService = () => {
   }
 
   return (
-    <div>
+    <div className="edit-service-container">
       <h1>Edit Service</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form-group">
           <label>Name:</label>
           <input
             type="text"
@@ -61,7 +60,7 @@ const EditService = () => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>Price:</label>
           <input
             type="number"
@@ -70,9 +69,13 @@ const EditService = () => {
             required
           />
         </div>
-        <button type="submit">Update</button>
+        <div className="btn-form">
+          <button type="submit" className="btn-submit">
+            Update
+          </button>
+          <button className="btn-back">Back</button>
+        </div>
       </form>
-      <button onClick={() => navigate(-1)}>Back</button>
     </div>
   );
 };
